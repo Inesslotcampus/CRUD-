@@ -93,6 +93,7 @@ public function destroy(Product $backoffice)
     
 ### Vue
 
+
 <form method="POST" action="{{ route('backoffice.destroy', $product) }}">
                         @csrf
                         @method("DELETE")
