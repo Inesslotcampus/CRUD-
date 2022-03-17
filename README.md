@@ -4,9 +4,15 @@
 
 ### Route 
 
+
+
 Route::resource('product', BackOfficeController::class);
 
+
+
 ### Controller
+
+
 
  public function edit(Product $backoffice)
  //doit permettre l'affichage du formulaire
@@ -34,7 +40,10 @@ Route::resource('product', BackOfficeController::class);
     }
     
     
+    
     ### View
+    
+    
     
      <form method="post" action="{{ route('backoffice.update', $product->id) }}">
 
@@ -50,12 +59,14 @@ Route::resource('product', BackOfficeController::class);
         </form>
         
         
+        
         ## Model
+        
         
         
         class Product extends Model
 {
-    // use HasFactory;
+ 
 
     protected $table = "product";
     protected $fillable = [ "name", "price", "stock" ];  // cathégories que je veux changer 
