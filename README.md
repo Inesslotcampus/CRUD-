@@ -11,7 +11,6 @@
 Route::resource('product', BackOfficeController::class);
 
 
-
 ### Controller
 
 
@@ -43,7 +42,7 @@ Route::resource('product', BackOfficeController::class);
     
     
     
-    ### View
+ ### View
     
     
     
@@ -62,7 +61,7 @@ Route::resource('product', BackOfficeController::class);
         
         
         
-        ## Model
+## Model
         
         
         
