@@ -42,7 +42,7 @@ Route::resource('product', BackOfficeController::class);
     
     
     
- ### View
+ ### View (edit)
     
     
     
@@ -61,10 +61,8 @@ Route::resource('product', BackOfficeController::class);
         
         
         
-## Model
-        
-        
-        
+### Model
+      
         class Product extends Model
 {
  
@@ -73,6 +71,43 @@ Route::resource('product', BackOfficeController::class);
     protected $fillable = [ "name", "price", "stock" ];  // cathégories que je veux changer 
     public $timestamps = false; // pour eviter erreur column .update
 }
+
+
+
+## Delect : methode destroy
+
+### Route 
+
+Route::resource('product', BackOfficeController::class);
+
+
+### Controller
+
+public function destroy(Product $backoffice)
+    {
+
+        
+        $backoffice->delete();
+        return redirect(route('backoffice.index'));
+    }
+    
+### Vue
+
+<form method="POST" action="{{ route('backoffice.destroy', $product) }}">
+                        @csrf
+                        @method("DELETE")
+                            <button type="submit" class="btn btn-danger" value="x Supprimer">Delete</button>
+ 
+ </form>
+    
+    
+    
+    
+
+
+
+
+
 
         
         
